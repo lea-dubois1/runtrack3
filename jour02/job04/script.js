@@ -1,16 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+const textarea = document.querySelector("#keylogger");
 
-const num = document.querySelector("#compteur");
-const btn = document.querySelector("#button");
+document.addEventListener("keydown", (e) => {
 
-function addone()
-{
-    btn.addEventListener("click", () => {
-        number = parseInt(num.textContent) + 1;
-        num.textContent = number;
-    })
-}
+    textarea.value = textarea.value + e.key;
 
-addone();
-
-})
+});

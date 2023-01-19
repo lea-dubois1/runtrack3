@@ -1,0 +1,11 @@
+body{
+    min-height: 4096px;
+}
+  
+footer{
+    height: 2em;
+    width: 100%;
+    background-color: blueviolet;
+    position: fixed;
+    bottom: 0;
+}
