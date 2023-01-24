@@ -1,0 +1,12 @@
+.section
+{
+    height: 10vh;
+    width: 24vw;
+    margin: 20px;
+    background-color: #88c1d0;
+}
+
+body
+{
+    display: flex;
+}

@@ -1,0 +1,16 @@
+Créer les boutons
+    écouter le click <nomBouton>.addEventListener('click', async (event) => {}) (async pour que si la fonction mais du temps à répondre, la suite du code se log quand même)
+        fetch inscription.php (return <nom de la reponse>.text() <- à esseyer) (.then) (avec un await)
+        recuperer le html grâce à la response (.then) + <nom de la div>.innerHTML = <le nom du html récupéré
+
+    écouter le submit -> preventDefault (pour ne pas être redirigé) (en dehors du fetch)
+        utiliser formData sur le form html pour stocker les données envoyées
+        fetch inscription.php
+            préciser la méthode (.then)
+            (.then) if (response.status === 201) { alert("votre compte a bien été créé") }
+
+php dans le html pour le connection à la base de données et insérer les données reçues dans la bdd et les conditions
+
+
+JSON.stringify(text en json)
+!! mettre des names aux champs dans le form !!
