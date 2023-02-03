@@ -1,65 +1,20 @@
-// On cible le body
-const body = document.querySelector("#body");
+// On établi le konamiCode
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
 
-// On crée des éléments pour les ajouter dans le body
-const title1 = document.createElement("h1")
-title1.textContent = "Ceci est un titre";
+// On créé la liste où on va stocker le cheat code de l'utilisateur
+let cheatCode = [];
 
-const para1 = document.createElement("p")
-para1.textContent = "Ceci est un paragraphe";
+const body = document.querySelector("body");               // On cible le bouton 'body'
 
-const para2 = document.createElement("p")
-para2.textContent = "Ceci est un autre paragraphe";
 
-const footer1 = document.createElement("footer")
-footer1.textContent = "Ceci est un footer";
+body.addEventListener("keydown", (event) => {                        // Quand l'utilisateur presse une touche
+    cheatCode.push(event.key);                                          // On ajoute l'évènement à la liste cheatCode
 
-let ok = 0;
-
-document.addEventListener("keydown", (e) => {
-
-    if (e.key !== 'undefined' && e.key == "a") {
-        console.log("ok");
-        ok = 1;
-        return ok;
+    if(cheatCode.length == konamiCode.length){                                  // Si la liste cheatCode contient autant d'éléments que konamiCode
+        if(konamiCode.every((value, index) => value === cheatCode[index])){         // On vérifie que les deux tableaux soient identiques
+            alert("Cheat Code Activated");
+            body.style.backgroundColor = "blue";                     // S'ils le sont, change la couleur de fond
+            console.log(konamiCode.every((value, index) => value === cheatCode[index]))
+        }
     }
-
-    console.log(ok);
-
-});
-
-document.addEventListener("keydown", (h) => {
-
-    if (h.key !== 'undefined' && h.key == "z" && ok == 1) {
-        console.log("no");
-        ok = 2;
-        return ok;
-    }
-
-    console.log(ok);
-
-});
-
-document.addEventListener("keydown", (i) => {
-
-    if (i.key !== 'undefined' && i.key == "e" && ok == 2) {
-        console.log("pas");
-        ok = 3;
-        return ok;
-    }
-
-    console.log(ok);
-
-});
-
-document.addEventListener("keydown", (j) => {
-
-    if (j.key !== 'undefined' && j.key == "r" && ok == 3) {
-        console.log("az");
-        ok = 4;
-        console.log("Ca marche");
-    }
-
-    console.log(ok);
-
 });

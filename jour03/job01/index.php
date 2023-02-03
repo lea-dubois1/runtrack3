@@ -8,7 +8,7 @@
     <script src="script.js" defer></script>
     <title>Document</title>
 </head>
-<body>
+<body id="body">
 
     <button id="button">Un bouton</button>
     

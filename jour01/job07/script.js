@@ -19,7 +19,6 @@ function jourtravaille(date) {
             return "Le " + jour + " " + num + " " + mois + " " + année + " est un jour travaillé";
         }
     }
-
 }
 
 console.log(jourtravaille('01/01/2020'));

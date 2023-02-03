@@ -1,13 +1,13 @@
 // On fixe la largeur du footer sur 0px pour le rendre invisible au chargement de la page
 document.querySelector("footer").style.width = "0px";
 
-window.onload = () => {
+window.onload = () => {         // Commencer après que la page entière ainsi que tous ses éléments on été chargés
         
     // On ecoute le scroll
     window.addEventListener("scroll",() => {
-        // On calcul la hauteur du document
+        // On calcule la hauteur du document
         let hauteur = document.documentElement.scrollHeight - window.innerHeight;
-        // On calcul la largeur de la fenêtre
+        // On calcule la largeur de la fenêtre
         let largeur = document.documentElement.clientWidth;
         // On récupère la position verticale
         let position = window.scrollY;

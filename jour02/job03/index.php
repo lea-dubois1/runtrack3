@@ -11,7 +11,7 @@
 
     <p id="compteur">0</p>
 
-    <button id="button">hide</button>
+    <button id="button">add</button>
     
 </body>
 </html>

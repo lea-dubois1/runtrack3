@@ -8,9 +8,7 @@ function sommenombrepremiers(var1, var2) {
         if (var1 % i == 0) {
             var1Prem = false
             return false
-            break
         }
-
     }
     
     for (let i = 2; i < var2; i++) {
@@ -18,16 +16,13 @@ function sommenombrepremiers(var1, var2) {
         if (var2 % i == 0) {
             var2Prem = false
             return false
-            break
         }
-
     }
 
     if (var1Prem == true && var2Prem == true) {
         let somme = var1 + var2
         return somme
     }
-
 }
 
 console.log(sommenombrepremiers(1, 4));
