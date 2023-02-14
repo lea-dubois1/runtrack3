@@ -1,20 +1,8 @@
-function jsonValueKey(str, key) {
-
-    string = JSON.parse(str);
-    console.log(string.key);
-    
+async function fetchData(tableau, cle) {
+    // On attends que le fetch se termine pour le stocker dans une variable
+    const response = await fetch(tableau);
+    const data = await response.json();
+    console.log(data[cle])
 }
-
-fetch('tableau.json')
-        .then((response) => {
-            return response.json();
-        })
-        .then((result) => {
-            let json = result;
-            return json;
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-
-jsonValueKey(json, 'mail');
+  
+fetchData('tableau.json', 'name');
