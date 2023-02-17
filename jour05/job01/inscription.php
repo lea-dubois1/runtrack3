@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
-    <title>Document</title>
-</head>
-<body>
+<form action="" method="POST" id="signupForm">
 
-    <form action="" method="POST" class="formulaire">
-        <input type="text" name="login" placeholder="Enter your login" required />
-        <input type="password" name="password" placeholder="Enter your password" required />
+    <input type="text" name="nom" id="nom" placeholder="Enter your lastname" required /><br>
+    <p id="errorNom"></p><br>
+    <input type="text" name="prenom" id="prenom" placeholder="Enter your firstname" required /><br>
+    <p id="errorPrenom"></p><br>
+    <input type="email" name="email" id="email" placeholder="Enter your email" required /><br>
+    <p id="errorEmail"></p><br>
+    <input type="password" name="password" placeholder="Enter your password" required /><br>
+    <p id="errorPass"></p><br>
+    <input type="password" name="passwordConfirm" placeholder="Confirm your password" required /><br>
+    <p id="errorPassConfirm"></p><br>
 
-        <button name="submit" id="register-button">Singup</button>
-    </form>
+    <button name="submit" id="signup">Singup</button>
     
-</body>
-</html>
+</form>

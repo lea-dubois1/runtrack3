@@ -2,10 +2,6 @@ const updateButton = document.querySelector("#update");
 const body = document.querySelector("body");
 const table = document.querySelector("#tableBody");
 
-function createTd() {
-    
-}
-
 // Actualiser la page si on clique sur le boutton
 updateButton.addEventListener("click", () => {
     location.reload();
