@@ -4,25 +4,15 @@ $messages = [];
 
 $db_username = 'root';
 $db_password = '';
-
-// On essaie de se connecter
 try{
-
     $conn = new PDO('mysql:host=localhost;dbname=utilisateurs;charset=utf8', $db_username, $db_password);
-
-    // On définit le mode d'erreur de PDO sur Exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // echo "You are connected to the database <br>";
 }
-
-// On capture les exceptions si une exception est lancée
 catch(PDOException $e){
-
-    // et on affiche les informations relatives à celle-ci
     echo "Error : " . $e->getMessage();
-
 }
+
+
 
 $sql = "SELECT * FROM utilisateurs WHERE email=:email";
         
@@ -45,18 +35,15 @@ if($row == 1){    // If the email exist in the data base, continue
         $_SESSION['firstname'] = $tab['firstname'];
         $_SESSION['lastname'] = $tab['lastname'];
 
-        $okConn = 'You\'re connected';
-        $messages['okConn'] = $okConn;
+        $messages['okConn'] = "You're connected";
 
         header('Location: index.php');
 
     }else{    // If the password do not match, error
-        $errorPass = 'Wrong password';
-        $messages['errorPass'] = $errorPass;
+        $messages['errorPass'] = 'Wrong password';
     }
 }else{    // If the login do not exist, error
-    $errorEmail = 'Email unknown.';
-    $messages['errorEmail'] = $errorEmail;
+    $messages['errorEmail'] = 'Email unknown';
 
 }
 

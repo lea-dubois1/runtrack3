@@ -10,7 +10,7 @@
 <body>
 
     <button id="switchInscription">Signup</button>
-    <button id="switchConnexion">Signin</button><br><br>
+    <button id="switchConnexion">Login</button><br><br>
 
     <div id="form"></div>
 
