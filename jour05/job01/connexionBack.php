@@ -32,12 +32,10 @@ if($row == 1){    // If the email exist in the data base, continue
         $_SESSION['id'] = $id;
         $_SESSION['password'] = $dataPass;
         $_SESSION['email'] = $tab['email'];
-        $_SESSION['firstname'] = $tab['firstname'];
-        $_SESSION['lastname'] = $tab['lastname'];
+        $_SESSION['firstname'] = $tab['prenom'];
+        $_SESSION['lastname'] = $tab['nom'];
 
         $messages['okConn'] = "You're connected";
-
-        header('Location: index.php');
 
     }else{    // If the password do not match, error
         $messages['errorPass'] = 'Wrong password';

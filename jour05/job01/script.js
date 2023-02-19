@@ -127,17 +127,22 @@ connexionButton.addEventListener('click', ()=>{
                     const paraErrorPass = document.createElement("p");
                     paraErrorPass.textContent = dataJSON['errorPass'];
                     errorPassDiv.appendChild(paraErrorPass);
-                }else if(dataJSON['errorEmail']) {
+                }
+                if(dataJSON['errorEmail']) {
                     const errorEmailDiv = document.getElementById('errorEmail');
                     const paraErrorEmail = document.createElement("p");
                     paraErrorEmail.textContent = dataJSON['errorEmail'];
                     errorEmailDiv.appendChild(paraErrorEmail);
                 }
+                if(dataJSON['okConn']) {
+                    const okConn = document.getElementById('okConn');
+                    const paraokConn = document.createElement("p");
+                    paraokConn.textContent = dataJSON['okConn'];
+                    okConn.appendChild(paraokConn);
+                    // document.location.href="pageBonjour.php"; 
+                }
             })
             .catch(error => alert("Error : " + error));
-        
         })
-
     })
-
 })

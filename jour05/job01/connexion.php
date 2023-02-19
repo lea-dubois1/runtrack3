@@ -6,6 +6,7 @@
     <p id="errorPass"></p>
 
     <button name="submit" id="signin">Singin</button>
+    <div id="okConn"></div>
 
 </form>
 
